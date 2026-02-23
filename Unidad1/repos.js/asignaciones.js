@@ -8,4 +8,4 @@ console.log(var1);
 console.log(var2);
 //let si cambia el valor
 let compuesto = var1 + " "  + var2;
-console.log(compuesto);
+console.log(compuesto);4
