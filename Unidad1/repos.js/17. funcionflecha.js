@@ -26,7 +26,7 @@ const buscarPasaje = (datos, presupuesto) => {
     let paisSeleccionado = '';
 
     for (let i = 0; i < datos.length && paisSeleccionado == ''; i++) {
-        if (datos[i].precio <= presupuesto) {
+        if (datos[i].precio <= presupuesto) {   
             paisSeleccionado = datos[i].pais;
         }
     }
