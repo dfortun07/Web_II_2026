@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de style</title>
+</head>
+<body>
+    <p>uno</p>
+    <p>dos</p>
+    <p>tres</p>
+    <p>cuatro</p>
+    <script>
+        const elementos = document.querySelectorAll('p');
+        elementos.forEach(elemento => {
+            elemento.style.color = 'blue'; 
+            elemento.style.fontSize = '20px'; 
+            elemento.style.fontWeight = 'bold';
+            elemento.style.backgroundColor = 'lightgray';
+            elemento.style.padding = '10px';
+            elemento.style.border = '2px solid black';
+            elemento.style.borderRadius = '5px';
+            elemento.style.margin = '10px 0';
+        
+        });
+    </script>
+
+        
+
+
+    
+</body>
+</html>

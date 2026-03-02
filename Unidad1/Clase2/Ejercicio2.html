@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2: Elecciond e elementos llamados por clase</title>
+</head>
+
+<body>
+    <div class="elemento">Texto inicial 1</div>
+    <div class="elemento">Texto inicial 2</div>
+    <div class="elemento">Texto inicial 3</div>
+    <script>
+        const elementos = document.getElementsByClassName("elemento");
+        for (const elemento of elementos) {
+            elemento.textContent= 'jjj'
+            elemento.style.backgroundColor='yellow';
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 14 STPOPROPAGATION</title>
+</head>
+
+<body>
+<div id="padre">elemento padre
+<div id="hijo">elemento hijo</div>
+</div>
+<script>
+    const padre=document.getElementById('padre')
+    const hijo=document.getElementById('hijo')
+    padre.addEventListener('click',()=>{
+        alert('haz hecho click en el elemento padre')
+    })
+    hijo.addEventListener('click',(e)=>{
+        e.stopPropagation()
+        alert('haz hecho click en el elemento hijo')
+    })
+</script>
+</body>
+</html>
