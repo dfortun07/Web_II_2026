@@ -1,5 +1,7 @@
 import checkComplete from "./components/checkComplete.js";
 import deleteIcon from "./components/deleteIcon.js";
+import validar from "./components/validar.js";
+
 (() => {
     const btn = document.querySelector('[data-form-btn]');
     console.log(btn);
@@ -7,6 +9,9 @@ import deleteIcon from "./components/deleteIcon.js";
     const createTask = (evento) => {
         evento.preventDefault();
         const input = document.querySelector('[data-form-input]');
+
+        if (!validar(input)) return; 
+
         const value = input.value;
         const list = document.querySelector('[data-list]');
         const task = document.createElement('li');
@@ -26,30 +31,4 @@ import deleteIcon from "./components/deleteIcon.js";
     }
 
     btn.addEventListener('click', createTask);
-
-    const checkComplete = () => {
-        const i = document.createElement('i');
-        i.classList.add('far', 'fa-check-square', 'icon');
-        i.addEventListener('click', color); 
-        return i; 
-    }
-
-    const color = (evento) => {
-        const element = evento.target;
-        element.classList.add('fas');
-        element.classList.remove('far');
-        element.classList.add('completeIcon');
-    }
-
-    const deleteIcon = () => {
-        const i = document.createElement('i');
-        i.classList.add('fas', 'fa-trash-alt', 'trashIcon', 'icon');
-        i.addEventListener('click', deleteTask); 
-        return i;
-    }
-
-    const deleteTask = (evento) => {
-        const parent = evento.target.parentElement;
-        parent.remove();
-    }
 })();
