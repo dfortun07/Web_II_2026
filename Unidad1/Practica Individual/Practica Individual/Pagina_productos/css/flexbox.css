@@ -1,0 +1,10 @@
+.headerPrincipal .container  { display: flex; }
+.headerPrincipal-nav         { display: flex; }
+.contenidoPrincipal-productos { display: flex; }
+.videoSobre .container       { display: flex; }
+.videoSobre-sobre            { display: flex; }
+.videoSobre-sobre-list       { display: flex; }
+.rodapePrincipal-navMap-list { display: flex; }
+.rodapePrincipal-patrocinadores .container { display: flex; }
+.rodapePrincipal-patrocinadores-list       { display: flex; }
+.rodapePrincipal-contatoForm-fieldset      { display: flex; }

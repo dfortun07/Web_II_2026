@@ -1,0 +1,368 @@
+body {
+    background-color: #0d0d0d;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.headerPrincipal {
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #f5c400;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.headerPrincipal .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerPrincipal-titulo a {
+    color: #f5c400;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.headerPrincipal-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.headerPrincipal-nav-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    transition: color 0.3s;
+}
+
+.headerPrincipal-nav-link:hover { color: #f5c400; }
+
+.headerPrincipal-nav-link-app {
+    background-color: #f5c400;
+    color: #0d0d0d;
+    border-radius: 2px;
+}
+
+.headerPrincipal-nav-link-app:hover {
+    background-color: #e0b000;
+    color: #0d0d0d;
+}
+
+.subtitulo {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    padding-left: 1rem;
+    border-left: 5px solid #f5c400;
+}
+
+.contenidoPrincipal {
+    padding: 4rem 0;
+    background-color: #111;
+}
+
+.contenidoPrincipal-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.contenidoPrincipal-productos-link {
+    flex: 1 1 100px;
+    min-height: 90px;
+    background-color: #1a1a1a;
+    text-align: center;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    border: 1px solid #222;
+}
+
+.contenidoPrincipal-productos-link:hover {
+    background-color: #1e1e1e;
+    transform: translateY(-4px);
+    border-color: #f5c400;
+}
+
+.contenidoPrincipal-productos-link a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0.8rem;
+    position: absolute;
+    top: 0; left: 0;
+    transition: color 0.3s;
+}
+
+.contenidoPrincipal-productos-link:hover a { color: #f5c400; }
+
+.contenidoPrincipal-productos-link a:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.4rem;
+    opacity: 0.6;
+}
+
+.contenidoPrincipal-productos-link:nth-child(even) a:before {
+    background: url(../img/background1.svg) no-repeat center;
+    background-size: cover;
+}
+
+.contenidoPrincipal-productos-link:nth-child(odd) a:before {
+    background: url(../img/background2.svg) no-repeat center;
+    background-size: cover;
+}
+
+.videoSobre {
+    background-color: #0d0d0d;
+    padding: 4rem 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.videoSobre .container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.videoSobre-sobre {
+    flex: 1 1 260px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.videoSobre-sobre-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f5c400;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.videoSobre-sobre-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    counter-reset: item;
+}
+
+.videoSobre-sobre-item {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.6;
+    padding: 0.8rem 1rem;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    counter-increment: item;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.videoSobre-sobre-item::before {
+    content: counter(item);
+    position: absolute;
+    left: 0.8rem;
+    font-weight: 700;
+    color: #f5c400;
+    font-size: 0.85rem;
+}
+
+.videoSobre-button {
+    align-self: flex-start;
+    background-color: #f5c400;
+    color: #0d0d0d;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.videoSobre-button:hover {
+    background-color: #e0b000;
+    transform: translateY(-2px);
+}
+
+.videoSobre-video {
+    flex: 1 1 280px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #f5c400;
+}
+
+.rodapePrincipal {
+    background-color: #111;
+    padding-top: 3rem;
+}
+
+.rodapePrincipal .subtitulo { color: #fff; }
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.rodapePrincipal-navMap-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1 1 120px;
+}
+
+.navmap-list-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+    padding-left: 0.5rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.navmap-list-title-zara   { color: #ec5aaf; border-left: 4px solid #EC6E5A; }
+.navmap-list-title-adidas { color: #9785bf; border-left: 4px solid #AD85BF; }
+.navmap-list-title-nike   { color: #775ef3; border-left: 4px solid #5EC6F3; }
+.navmap-list-title-polo   { color: #6725d2; border-left: 4px solid #25D285; }
+
+.rodapePrincipal-navMap-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.82rem;
+    transition: color 0.3s;
+}
+
+.rodapePrincipal-navMap-link:hover { color: #f5c400; }
+
+.rodapePrincipal-patrocinadores {
+    margin-top: 2.5rem;
+    background-color: #0d0d0d;
+    border-top: 2px solid #f5c400;
+    padding: 1.5rem 0;
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list-link img {
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.rodapePrincipal-patrocinadores-list-link:hover img { opacity: 1; }
+
+.rodapePrincipal-contatoForm fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rodapePrincipal-contatoForm-legend {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-contatoForm-emailInput {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    color: #fff;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.rodapePrincipal-contatoForm-emailInput:focus { border-color: #f5c400; }
+
+.rodapePrincipal-contatoForm-submit {
+    background-color: #f5c400;
+    color: #0d0d0d;
+    border: 2px solid #f5c400;
+    border-radius: 0 3px 3px 0;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rodapePrincipal-contatoForm-submit:hover { background-color: #e0b000; }
+
+@media (max-width: 768px) {
+    .headerPrincipal .container { flex-direction: column; gap: 1rem; text-align: center; }
+    .headerPrincipal-nav { justify-content: center; }
+    .subtitulo { font-size: 1.2rem; }
+    .videoSobre .container { flex-direction: column; }
+    .videoSobre-video { width: 100%; }
+    .videoSobre-button { align-self: center; }
+    .rodapePrincipal-patrocinadores .container { flex-direction: column; align-items: center; }
+}
