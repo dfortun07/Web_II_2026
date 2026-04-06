@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Local Server</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <header>
+        <h1>CRUD Local Server</h1>
+      </header>
+
+      <div class="controls">
+        <button class="btn btn-get" id="btn-get">Obtener Usuarios (GET)</button>
+        <button class="btn btn-post" id="btn-post">Crear Usuario (POST)</button>
+        <button class="btn btn-put" id="btn-put">Actualizar Usuario (PUT)</button>
+        <button class="btn btn-delete" id="btn-delete">Eliminar Usuario (DELETE)</button>
+      </div>
+
+      <div id="slot-form"></div>
+
+      <div class="tableContainer">
+        <h2>Lista de Usuarios</h2>
+        <table id="taskTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Curso</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="cardsContainer">
+        <h2>Usuarios Registrados</h2>
+        <div id="taskCards"></div>
+      </div>
+
+      <div class="results">
+        <h3>Resultados:</h3>
+        <div id="status"></div>
+        <pre id="result">RESULTADO...</pre>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
