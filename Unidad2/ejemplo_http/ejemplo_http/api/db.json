@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "titulo": "nuevo post",
+      "descipcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:33:39.453Z",
+      "id": "h3Z3OaZEdes"
+    },
+    {
+      "titulo": "nuevo post",
+      "descipcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:33:43.410Z",
+      "id": "fdVOjt0xmAY"
+    },
+    {
+      "titulo": "nuevo post",
+      "descipcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:33:44.886Z",
+      "id": "O24yAxmWp3M"
+    },
+    {
+      "titulo": "nuevo post",
+      "descipcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:58:51.839Z",
+      "id": "v59_bxUuya4"
+    },
+    {
+      "titulo": "nuevo post",
+      "descipcion": "es un nuevo post creado",
+      "fecha": "2026-03-23T13:58:56.884Z",
+      "id": "tc7EuoyTCdk"
+    },
+    {
+      "titulo": "kjlkj",
+      "descipcion": "hjhgjh",
+      "fecha": "2026-03-23T14:26:01.509Z",
+      "id": "sNm5IGFGMq0"
+    },
+    {
+      "titulo": "tarea",
+      "descipcion": "no lo se rick",
+      "fecha": "2026-03-23T14:30:29.097Z",
+      "id": "0JlKzroSCCk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
