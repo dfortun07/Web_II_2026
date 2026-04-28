@@ -3,16 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doguito Petshop | Cadastro de cliente</title>
+    <title>Admin | Editar Usuario</title>
     <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../assets/css/componentes/header.css" />
     <link rel="stylesheet" href="../assets/css/componentes/card.css" />
@@ -22,57 +16,34 @@
   </head>
   <body>
     <header class="header container">
-      <img
-        src="../assets/img/doguitoadm.svg"
-        alt="Logo Doguito"
-        class="header__logo"
-      />
+      <img src="../assets/img/doguitoadm.svg" alt="Logo Admin" class="header__logo" />
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
-          <li class="header__link">
-            <a href="lista_cliente.html">Clientes </a>
-          </li>
-          <li class="header__link"><a href="#">Pets</a></li>
+          <li class="header__link"><a href="lista_articulos.html">Artículos</a></li>
+          <li class="header__link"><a href="lista_usuarios.html">Usuarios</a></li>
+          <li class="header__link"><a href="lista_mascotas.html">Mascotas</a></li>
         </ul>
       </nav>
     </header>
     <main class="container flex flex--center flex--column">
       <section class="card cadastro">
-        <h1 class="card__title">Nuevo Cliente</h1>
+        <h1 class="card__title">Editar Usuario</h1>
         <form class="flex flex--column" data-form>
           <div class="input-container">
-            <input
-              name="nombre"
-              id="nombre"
-              class="input"
-              type="text"
-              placeholder="Nombre"
-              required
-              data-nombre
-            />
+            <input name="nombre" id="nombre" class="input" type="text" placeholder="Nombre" required data-nombre />
             <label class="input-label" for="nombre">Nombre</label>
             <span class="input-menssage-error">Este campo es requerido</span>
           </div>
           <div class="input-container">
-            <input
-              name="email"
-              id="email"
-              class="input"
-              type="text"
-              placeholder="email"
-              required
-              data-email
-            />
+            <input name="email" id="email" class="input" type="email" placeholder="email" required data-email />
             <label class="input-label" for="email">Email</label>
             <span class="input-menssage-error">Este campo es requerido</span>
           </div>
-          <button type="submit" class="button">Registrar</button>
-          <div id="mensajeEstado" class="mensaje-estado" style="margin-top: 16px; font-size: 0.95rem; min-height: 1.4em;"></div>
+          <button type="submit" class="button">Actualizar</button>
         </form>
       </section>
     </main>
-    <script type="module" src="../controllers/registro_controllers.js"></script>
+    <script type="module" src="../controllers/formulario_usuario.js"></script>
   </body>
 </html>

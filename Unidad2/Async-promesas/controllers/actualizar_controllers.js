@@ -35,7 +35,7 @@ formulario.addEventListener("submit", (evento) => {
     clientService.actualizarCliente(nombre, email, id)
         .then((respuesta) => {
             console.log("Cliente actualizado:", respuesta);
-            window.location.href = "/screens/actualizacion_completada.html";
+            window.location.href = "../screens/edicion_concluida.html";
         })
         .catch((error) => {
             console.log("Error al actualizar cliente:", error);

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Dashboard</title>
+    <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+    <style>
+      .dashboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 30px;
+      }
+      .card-dashboard {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      .card-dashboard h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      .card-dashboard p {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+      .card-dashboard a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 5px;
+      }
+      .card-dashboard a:hover {
+        background: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header container">
+      <img src="../assets/img/doguitoadm.svg" alt="Logo Admin" class="header__logo" />
+      <nav>
+        <ul class="header__list-nav">
+          <li class="header__link"><a href="index.html">Dashboard</a></li>
+          <li class="header__link"><a href="lista_articulos.html">Artículos</a></li>
+          <li class="header__link"><a href="lista_usuarios.html">Usuarios</a></li>
+          <li class="header__link"><a href="lista_mascotas.html">Mascotas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+  </body>
+</html>

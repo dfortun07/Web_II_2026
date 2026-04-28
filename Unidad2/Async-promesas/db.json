@@ -1,9 +1,51 @@
 {
   "perfil": [
     {
-      "nombre": "FULANITO",
-      "email": "fulanito@univalle.com",
-      "id": 1
+      "nombre": "David",
+      "email": "ibd071u.y25gwc@outlook.com",
+      "id": "M-noIjsn_UE"
+    },
+    {
+      "nombre": "david",
+      "email": "fortun@gmail.com",
+      "id": "WJmRwOxiJgc"
+    },
+    {
+      "nombre": "david",
+      "email": "fortun@gmail.com",
+      "id": "bK-9n55d7hk"
+    },
+    {
+      "nombre": "David",
+      "email": "ibd071u.y25gwc@outlook.com",
+      "id": "p3tKkXXsfcs"
     }
-  ]
+  ],
+  "productos": [
+    {
+      "nombre": "Croquetas Premium",
+      "precio": "150",
+      "descripcion": "Alimento para perros",
+      "id": "2"
+    },
+    {
+      "nombre": "dad",
+      "precio": "43",
+      "descripcion": "en este producto debemos anose",
+      "id": "QGuCiEjlp0A"
+    },
+    {
+      "nombre": "David``",
+      "precio": "da",
+      "descripcion": "dad",
+      "id": "SQVPOo5-27c"
+    },
+    {
+      "nombre": "David",
+      "precio": "dad",
+      "descripcion": "adad",
+      "id": "gxuanK2VWP0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -8,10 +8,7 @@ const CrearFila = (nombre, email, id) => {
         <td>
             <ul class="table__button-control">
                 <li>
-                    
-                        href="../screens/editar_cliente.html?id=${id}"
-                        class="simple-button simple-button--edit"
-                    >
+                    <a href="../screens/editar_cliente.html?id=${id}" class="simple-button simple-button--edit">
                         Editar
                     </a>
                 </li>
@@ -34,7 +31,7 @@ const CrearFila = (nombre, email, id) => {
             })
             .catch(err => alert("error al eliminar"));
     });
-    return fila;        
+    return fila;
 }
 
 const table = document.querySelector('[data-table]');
@@ -45,4 +42,4 @@ clientService.listar_clientes()
             table.appendChild(nuevaFila);
         });
     })
-    .catch((error) => alert("error"));
+    .catch((error) => alert("error al cargar clientes"));

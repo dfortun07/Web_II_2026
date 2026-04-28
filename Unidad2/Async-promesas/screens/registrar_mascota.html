@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Registrar Mascota</title>
+    <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="../assets/css/register_client.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <img src="../assets/img/doguitoadm.svg" alt="Logo Admin" class="header__logo" />
+      <nav>
+        <ul class="header__list-nav">
+          <li class="header__link"><a href="#">Dashboard</a></li>
+          <li class="header__link"><a href="lista_articulos.html">Artículos</a></li>
+          <li class="header__link"><a href="lista_usuarios.html">Usuarios</a></li>
+          <li class="header__link"><a href="lista_mascotas.html">Mascotas</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container flex flex--center flex--column">
+      <section class="card cadastro">
+        <h1 class="card__title">Nueva Mascota</h1>
+        <form class="flex flex--column" data-form>
+          <div class="input-container">
+            <input name="nombre" id="nombre" class="input" type="text" placeholder="Nombre de la mascota" required data-nombre />
+            <label class="input-label" for="nombre">Nombre</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+          <div class="input-container">
+            <input name="tipo" id="tipo" class="input" type="text" placeholder="Tipo (Perro, Gato, etc)" required data-tipo />
+            <label class="input-label" for="tipo">Tipo</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+          <div class="input-container">
+            <input name="raza" id="raza" class="input" type="text" placeholder="Raza" data-raza />
+            <label class="input-label" for="raza">Raza</label>
+            <span class="input-menssage-error">Este campo es opcional</span>
+          </div>
+          <div class="input-container">
+            <input name="edad" id="edad" class="input" type="number" placeholder="Edad" data-edad />
+            <label class="input-label" for="edad">Edad</label>
+            <span class="input-menssage-error">Este campo es opcional</span>
+          </div>
+          <button type="submit" class="button">Registrar</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="../controllers/formulario_mascota.js"></script>
+  </body>
+</html>
