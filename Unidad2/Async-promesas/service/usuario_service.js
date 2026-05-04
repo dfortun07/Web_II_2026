@@ -1,4 +1,12 @@
-const API_BASE = "/Async-promesas/api/conexion.php?tabla=usuarios";
+// Conexión original local (XAMPP - PHP)
+// const API_BASE = "/Async-promesas/api/conexion.php?tabla=usuarios";
+
+// Conexión a la nube (Supabase)
+// const API_BASE = "https://givvtpwlrhxgopugqgcx.supabase.co/rest/v1/usuarios";
+// const API_KEY = "sb_publishable_B0OXcNgTSrVO3IJFitOQfg_E42wrbeI";
+
+// Conexión actual con SQL Server (API Node.js)
+const API_BASE = "http://localhost:3000/api/usuarios";
 
 const listarUsuarios = () => {
     return fetch(API_BASE)
@@ -49,7 +57,7 @@ const actualizarUsuario = (id, nombre, email) => {
 };
 
 const eliminarUsuario = (id) => {
-    return fetch(`${API_BASE}&id=${id}`, {
+    return fetch(`${API_BASE}?id=${id}`, {
         method: "DELETE"
     })
     .then(response => {
@@ -63,7 +71,7 @@ const eliminarUsuario = (id) => {
 };
 
 const obtenerUsuario = (id) => {
-    return fetch(`${API_BASE}&id=${id}`)
+    return fetch(`${API_BASE}?id=${id}`)
         .then(response => {
             if (!response.ok) throw new Error("Usuario no encontrado");
             return response.json();

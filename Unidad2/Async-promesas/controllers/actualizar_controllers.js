@@ -5,7 +5,7 @@ const obInfo = async () => {
     const url = new URL(window.location);
     const id = url.searchParams.get("id");
     if(id == null){
-        window.location.href = "/screens/error.html";
+        window.location.href = "error.html";
     }
 
     document.querySelector("[data-nombre]")
@@ -20,7 +20,7 @@ const obInfo = async () => {
         }
     } catch (error) {
         alert("error al cargar los datos");
-        window.location.href = "/screens/error.html";
+        window.location.href = "error.html";
     }   
 };
 

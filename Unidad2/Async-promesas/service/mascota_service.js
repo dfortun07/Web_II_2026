@@ -1,4 +1,12 @@
-const API_BASE = "/Async-promesas/api/conexion.php?tabla=mascotas";
+// Conexión original local (XAMPP - PHP)
+// const API_BASE = "/Async-promesas/api/conexion.php?tabla=mascotas";
+
+// Conexión a la nube (Supabase)
+// const API_BASE = "https://givvtpwlrhxgopugqgcx.supabase.co/rest/v1/mascotas";
+// const API_KEY = "sb_publishable_B0OXcNgTSrVO3IJFitOQfg_E42wrbeI";
+
+// Conexión actual con SQL Server (API Node.js)
+const API_BASE = "http://localhost:3000/api/mascotas";
 
 const listarMascotas = () => {
     return fetch(API_BASE)
@@ -49,7 +57,7 @@ const actualizarMascota = (id, nombre, tipo, raza = "", edad = 0) => {
 };
 
 const eliminarMascota = (id) => {
-    return fetch(`${API_BASE}&id=${id}`, {
+    return fetch(`${API_BASE}?id=${id}`, {
         method: "DELETE"
     })
     .then(response => {
@@ -63,7 +71,7 @@ const eliminarMascota = (id) => {
 };
 
 const obtenerMascota = (id) => {
-    return fetch(`${API_BASE}&id=${id}`)
+    return fetch(`${API_BASE}?id=${id}`)
         .then(response => {
             if (!response.ok) throw new Error("Mascota no encontrada");
             return response.json();
