@@ -1,3 +1,4 @@
+/*
 // Conexión original local (XAMPP - PHP)
 // const API_BASE = "/Async-promesas/api/conexion.php?tabla=articulos";
 
@@ -88,4 +89,41 @@ export const articuloService = {
     actualizarArticulo,
     eliminarArticulo,
     obtenerArticulo
+};
+*/
+
+const BASE_URL = "http://localhost:3000";
+
+export const articuloService = {
+    listarArticulos: async () => {
+        const res = await fetch(`${BASE_URL}/articulos`);
+        return res.json();
+    },
+    obtenerArticulo: async (id) => {
+        const res = await fetch(`${BASE_URL}/articulos/${id}`);
+        return res.json();
+    },
+    crearArticulo: async (nombre, precio, descripcion = "") => {
+        const id = crypto.randomUUID();
+        const res = await fetch(`${BASE_URL}/articulos`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id, nombre, precio, descripcion })
+        });
+        return res.json();
+    },
+    actualizarArticulo: async (nombre, precio, descripcion, id) => {
+        const res = await fetch(`${BASE_URL}/articulos/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre, precio, descripcion })
+        });
+        return res.json();
+    },
+    eliminarArticulo: async (id) => {
+        const res = await fetch(`${BASE_URL}/articulos/${id}`, {
+            method: "DELETE"
+        });
+        return res.json();
+    }
 };

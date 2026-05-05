@@ -1,3 +1,4 @@
+/*
 // Conexión original local (XAMPP - PHP)
 // const API_BASE = "/Async-promesas/api/conexion.php?tabla=mascotas";
 
@@ -88,4 +89,42 @@ export const mascotaService = {
     actualizarMascota,
     eliminarMascota,
     obtenerMascota
+};
+*/
+
+// --- CÓDIGO NUEVO (Node.js + Express) ---
+const BASE_URL = "http://localhost:3000";
+
+export const mascotaService = {
+    listarMascotas: async () => {
+        const res = await fetch(`${BASE_URL}/mascotas`);
+        return res.json();
+    },
+    obtenerMascota: async (id) => {
+        const res = await fetch(`${BASE_URL}/mascotas/${id}`);
+        return res.json();
+    },
+    crearMascota: async (nombre, tipo, raza, edad) => {
+        const id = crypto.randomUUID();
+        const res = await fetch(`${BASE_URL}/mascotas`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id, nombre, tipo, raza, edad })
+        });
+        return res.json();
+    },
+    actualizarMascota: async (nombre, tipo, raza, edad, id) => {
+        const res = await fetch(`${BASE_URL}/mascotas/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre, tipo, raza, edad })
+        });
+        return res.json();
+    },
+    eliminarMascota: async (id) => {
+        const res = await fetch(`${BASE_URL}/mascotas/${id}`, {
+            method: "DELETE"
+        });
+        return res.json();
+    }
 };

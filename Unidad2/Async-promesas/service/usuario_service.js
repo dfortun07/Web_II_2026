@@ -1,3 +1,4 @@
+/*
 // Conexión original local (XAMPP - PHP)
 // const API_BASE = "/Async-promesas/api/conexion.php?tabla=usuarios";
 
@@ -88,4 +89,42 @@ export const usuarioService = {
     actualizarUsuario,
     eliminarUsuario,
     obtenerUsuario
+};
+*/
+
+// --- CÓDIGO NUEVO (Node.js + Express) ---
+const BASE_URL = "http://localhost:3000";
+
+export const usuarioService = {
+    listarUsuarios: async () => {
+        const res = await fetch(`${BASE_URL}/usuarios`);
+        return res.json();
+    },
+    obtenerUsuario: async (id) => {
+        const res = await fetch(`${BASE_URL}/usuarios/${id}`);
+        return res.json();
+    },
+    crearUsuario: async (nombre, email) => {
+        const id = crypto.randomUUID();
+        const res = await fetch(`${BASE_URL}/usuarios`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id, nombre, email })
+        });
+        return res.json();
+    },
+    actualizarUsuario: async (nombre, email, id) => {
+        const res = await fetch(`${BASE_URL}/usuarios/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre, email })
+        });
+        return res.json();
+    },
+    eliminarUsuario: async (id) => {
+        const res = await fetch(`${BASE_URL}/usuarios/${id}`, {
+            method: "DELETE"
+        });
+        return res.json();
+    }
 };
